@@ -1626,7 +1626,7 @@ namespace VIDE_Data
         public static void LoadDialogues()
         {
             FetchDiags();
-            foreach (Diags d in diags.ToArray())
+            foreach (Diags d in diags)
             {
                 currentDiag = diags.IndexOf(d);
                 Load(d.name);

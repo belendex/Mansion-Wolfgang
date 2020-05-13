@@ -64,7 +64,8 @@ public class Template_UIManager : MonoBehaviour
     }
 
     //Call this to begin the dialogue and advance through it
-    public void Interact(VIDE_Assign dialogue) {
+    public void Interact(VIDE_Assign dialogue)
+    {
         //Sometimes, we might want to check the ExtraVariables and VAs before moving forward
         //We might want to modify the dialogue or perhaps go to another node, or dont start the dialogue at all
         //In such cases, the function will return true
@@ -82,7 +83,8 @@ public class Template_UIManager : MonoBehaviour
     }
 
     //This begins the conversation. 
-    void Begin(VIDE_Assign dialogue) {
+    void Begin(VIDE_Assign dialogue)
+    {
         //Let's reset the NPC text variables
         NPC_Text.text = "";
         NPC_label.text = "";
@@ -120,7 +122,8 @@ public class Template_UIManager : MonoBehaviour
     {
         VD.nodeData.commentIndex = choice;
 
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0))
+        {
             Interact(VD.assigned);
         }
     }
@@ -301,7 +304,8 @@ public class Template_UIManager : MonoBehaviour
     }
 
     //To prevent errors
-    void OnDisable() {
+    void OnDisable()
+    {
         EndDialogue(null);
     }
 
@@ -374,7 +378,7 @@ public class Template_UIManager : MonoBehaviour
 
     #region EVENTS AND HANDLERS
 
-    //Called when dialogues are finished loading
+    //Called when dialogue sare finished loading
     void OnLoadedAction()
     {
         //Debug.Log("Finished loading all dialogues");
